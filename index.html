@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#dc2626">
   <meta charset="UTF-8">
   <title>AI Guard</title>
   <link rel="stylesheet" href="style.css">
@@ -29,6 +31,11 @@
     <li>Automatic Alert Trigger</li>
     <li>Alerts to Police & Trusted Contacts</li>
   </ol>
+<script>
+  if ("serviceWorker" in navigator) {
+    navigator.serviceWorker.register("service-worker.js");
+  }
+</script>
 
 </body>
 </html>
