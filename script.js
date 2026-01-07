@@ -1,7 +1,8 @@
 function calculateRisk() {
   let time = Math.random() > 0.5 ? "night" : "day";
   let crowd = Math.random() > 0.5 ? "low" : "high";
-  let movement = Math.random() > 0.5 ? "abnormal" : "normal";
+let movement = "abnormal";
+
 
   let riskScore = 0;
 
