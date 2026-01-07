@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI Guard Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>AI Guard Dashboard</h1>
+
+<div class="card">
+
+  <button onclick="pressSOS()" class="sos">🚨 SOS</button>
+
+  <h2>Risk Score</h2>
+
+  <div class="progress">
+    <div id="bar"></div>
+  </div>
+
+  <p><b><span id="risk">0</span> / 100</b></p>
+
+  <h3>Status: <span id="status" class="badge normal">Normal</span></h3>
+
+  <button onclick="calculateRisk()" class="btn">Simulate Risk</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
