@@ -1,48 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>AI Guard Dashboard</title>
   <link rel="stylesheet" href="style.css">
-  <script src="script.js"></script>
 </head>
 <body>
 
-<header>
-  <h1>AI Guard Monitoring</h1>
-</header>
+<h1>AI Guard Dashboard</h1>
 
-<section>
-  <label>Time</label>
-  <select id="time">
-    <option value="day">Day</option>
-    <option value="night">Night</option>
-  </select>
+<button onclick="pressSOS()" class="sos">🚨 SOS</button>
 
-  <label>Crowd Level</label>
-  <select id="crowd">
-    <option value="high">High</option>
-    <option value="medium">Medium</option>
-    <option value="low">Low</option>
-  </select>
+<h2>Risk Score: <span id="risk">0</span></h2>
+<h3>Status: <span id="status">Normal</span></h3>
 
-  <label>Movement</label>
-  <select id="movement">
-    <option value="normal">Normal</option>
-    <option value="abnormal">Abnormal</option>
-  </select>
+<button onclick="calculateRisk()" class="btn">Simulate Risk</button>
 
-  <br><br>
-
-  <label>
-    <input type="checkbox" id="sos"> SOS Button Pressed
-  </label>
-
-  <br><br>
-
-  <button onclick="checkSystem()" class="btn">Check Risk</button>
-
-  <h3 id="status"></h3>
-</section>
-
+<script src="script.js"></script>
 </body>
 </html>
