@@ -31,7 +31,3 @@
 .silent { background: orange; }
 .alert  { background: red; }
 
-.btn:hover {
-  opacity: 0.9;
-}
-
