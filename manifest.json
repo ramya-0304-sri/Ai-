@@ -1,18 +1,19 @@
 {
   "name": "AI Guard",
   "short_name": "AI Guard",
-  "start_url": "./index.html",
+  "start_url": "/Ai-/index.html",
+  "scope": "/Ai-/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#dc2626",
   "icons": [
     {
-      "src": "icon.png",
+      "src": "/Ai-/icon.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "icon.png",
+      "src": "/Ai-/icon.png",
       "sizes": "512x512",
       "type": "image/png"
     }
