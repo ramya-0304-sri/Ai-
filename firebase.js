@@ -1,1 +1,1 @@
-alert("Firebase file loaded successfully!");
+alert("Firebase file successfully!");
