@@ -1,43 +1,21 @@
-function calculateRisk() {
-  let time = Math.random() > 0.5 ? "night" : "day";
-  let crowd = Math.random() > 0.5 ? "low" : "high";
-let movement = "abnormal";
+import { db } from "./firebase.js";
+import { collection, addDoc } from
+  "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
+window.registerUser = async function (e) {
+  e.preventDefault();
 
-  let riskScore = 0;
+  const name = document.getElementById("name").value;
+  const phone = document.getElementById("phone").value;
+  const emergency = document.getElementById("emergency").value;
 
-  if (time === "night") riskScore += 30;
-  if (crowd === "low") riskScore += 30;
-  if (movement === "abnormal") riskScore += 40;
+  await addDoc(collection(db, "users"), {
+    name: name,
+    phone: phone,
+    emergency: emergency,
+    createdAt: new Date()
+  });
 
-  document.getElementById("risk").innerText = riskScore;
-  document.getElementById("bar").style.width = riskScore + "%";
-
-  let bar = document.getElementById("bar");
-  let status = document.getElementById("status");
-
-  if (riskScore < 30) {
-    bar.style.background = "green";
-    status.innerText = "Normal";
-    status.className = "badge normal";
-  }
-  else if (riskScore < 80) {
-    bar.style.background = "orange";
-    status.innerText = "Silent Monitoring ⚠️";
-    status.className = "badge silent";
-  }
-  else {
-    bar.style.background = "red";
-    status.innerText = "🚨 Alert Sent to Police & Contacts";
-    status.className = "badge alert";
-  }
-}
-
-function pressSOS() {
   document.getElementById("status").innerText =
-    "🚨 SOS Activated! Alert Sent";
-  document.getElementById("status").className = "badge alert";
-  document.getElementById("bar").style.width = "100%";
-  document.getElementById("bar").style.background = "red";
-}
-
+    "✅ Registered successfully (Saved in Firebase)";
+};
