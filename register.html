@@ -13,6 +13,12 @@
   <label>Name:</label><br>
   <input type="text" id="name" required><br><br>
 
+  <label>Email:</label><br>
+  <input type="email" id="email" required><br><br>
+
+  <label>Password:</label><br>
+  <input type="password" id="password" required><br><br>
+
   <label>Phone:</label><br>
   <input type="text" id="phone" required><br><br>
 
@@ -24,14 +30,9 @@
 
 <p id="status"></p>
 
-<script>
-function registerUser(e) {
-  e.preventDefault();
-  localStorage.setItem("registered", "true");
-  document.getElementById("status").innerText =
-    "✅ Registered successfully! Open Dashboard.";
-}
-</script>
+<!-- 🔥 Firebase backend -->
+<script type="module" src="firebase.js"></script>
+<script type="module" src="register.js"></script>
 
 </body>
 </html>
